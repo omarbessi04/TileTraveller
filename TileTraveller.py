@@ -1,8 +1,3 @@
-x = 1
-y = 1
-coordinates_of_player = [x,y]
-Invalid_direction = True
-
 #functions that move player
 def goNorth():
     global y, coordinates_of_player
@@ -40,17 +35,21 @@ def Check_Valid_Directions():
             if (directions)[i] == directions[3]:
                 Valid_directions.append("(W)est")
 
+x = 1
+y = 1
+coordinates_of_player = [x,y]
+Invalid_direction = True
+
+
 #list of all the tiles that are available, N, S, E, W
 directions = [[[1,1], [1,2], [2,1], [3,1], [3,2]],  [[1,2], [1,3], [2,2], [3,3], [3,2]],  [[1,3], [1,2], [2,3]],  [[3,3], [2,3], [2,2]]]
 Valid_directions = []
 
 Check_Valid_Directions()
-print("You can travel: ", " or ".join(Valid_directions))
-print()
+print("You can travel: ", " or ".join(Valid_directions), end=".\n")
 
 while coordinates_of_player != [3, 1]:
-    
-    print(coordinates_of_player)
+
     Valid_directions = []
     Check_Valid_Directions()
     player_move = input("Direction: ")
@@ -65,7 +64,6 @@ while coordinates_of_player != [3, 1]:
     elif player_move.lower() == "s":
         if "(S)outh" in Valid_directions:
             goSouth()
-            print("I am moving south")
             Invalid_direction = False
         else:
             Invalid_direction = True
@@ -73,7 +71,6 @@ while coordinates_of_player != [3, 1]:
     elif player_move.lower() == "e":
         if "(E)ast" in Valid_directions:
             goEast()
-            print("I am moving east")
             Invalid_direction = False
         else:
             Invalid_direction = True
@@ -81,7 +78,6 @@ while coordinates_of_player != [3, 1]:
     elif player_move.lower() == "w":
         if "(W)est" in Valid_directions:
             goWest()
-            print("I am moving west")
             Invalid_direction = False
         else:
             Invalid_direction = True
@@ -89,11 +85,9 @@ while coordinates_of_player != [3, 1]:
     if Invalid_direction:
         print("Not a valid direction!")
     else:
-        Valid_directions = []
-        Check_Valid_Directions()
-        print("You can travel: ", " or ".join(Valid_directions))
-
-    if player_move == 2:
-        coordinates_of_player = [3, 1]
+        if coordinates_of_player != [3,1]:
+            Valid_directions = []
+            Check_Valid_Directions()
+            print("You can travel: ", " or ".join(Valid_directions), end=".\n")
 
 print("Victory!")
