@@ -92,6 +92,9 @@ while coordinates_of_player != [3, 1]:
 
     if Invalid_direction:
         print("Not a valid direction!")
+        Valid_directions = []
+        Check_Valid_Directions()
+        print("You can travel: ", " or ".join(Valid_directions), end=".\n")
     else:
         if coordinates_of_player != [3,1]:
             Valid_directions = []
