@@ -1,3 +1,11 @@
+#               https://github.com/omarbessi04/TileTraveller
+
+# 1. Create functions to move player and check for directions
+# 2. Prompt player with input
+# 3. Move player based on input OR don't
+# 4. Once player has reached goal, end program
+
+
 #functions that move player
 def goNorth():
     global y, coordinates_of_player
