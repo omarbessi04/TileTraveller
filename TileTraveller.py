@@ -6,10 +6,11 @@ comprehensive step),
 until you start to see a way to convert this description into code.
 """
 # 3. Then start writing the code
+
 x = 1
 y = 1
 coordinates_of_player = [x,y]
-
+#functions that move player
 def goNorth():
     y += 1
 
@@ -21,3 +22,6 @@ def goEast():
 
 def goWest():
     x -= 1
+
+#list of all the tiles that are available
+directions = [[[1,1][1,2][2,1][3,1][3,2]], [[1,2][1,3][2,2][3,3][3,2]], [[1,3][1,2][2,3]], [[3,3][2,3][2,2]]]
