@@ -6,3 +6,18 @@ comprehensive step),
 until you start to see a way to convert this description into code.
 """
 # 3. Then start writing the code
+x = 1
+y = 1
+coordinates_of_player = [x,y]
+
+def goNorth():
+    y += 1
+
+def goSouth():
+    y -= 1
+
+def goEast():
+    x += 1
+
+def goWest():
+    x -= 1
