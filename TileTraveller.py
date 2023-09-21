@@ -35,10 +35,10 @@ def Check_Valid_Directions():
                 Valid_directions.append("(N)orth")
 
             if (directions)[i] == directions[1]:
-                Valid_directions.append("(S)outh")
+                Valid_directions.append("(E)ast")
 
             if (directions)[i] == directions[2]:
-                Valid_directions.append("(E)ast")
+                Valid_directions.append("(S)outh")
 
             if (directions)[i] == directions[3]:
                 Valid_directions.append("(W)est")
