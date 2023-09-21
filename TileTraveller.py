@@ -49,8 +49,12 @@ coordinates_of_player = [x,y]
 Invalid_direction = True
 
 
-#list of all the tiles that are available, N, S, E, W
-directions = [[[1,1], [1,2], [2,1], [3,1], [3,2]],  [[1,2], [1,3], [2,2], [3,3], [3,2]],  [[1,3], [1,2], [2,3]],  [[3,3], [2,3], [2,2]]]
+#list of all the tiles that are available, N, E, S, W
+directions = [[[1,1], [1,2], [2,1], [3,1], [3,2]], 
+              [[1,3], [1,2], [2,3]],
+              [[1,2], [1,3], [2,2], [3,3], [3,2]],    
+              [[3,3], [2,3], [2,2]]]
+
 Valid_directions = []
 
 Check_Valid_Directions()
